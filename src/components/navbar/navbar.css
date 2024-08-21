@@ -1,0 +1,75 @@
+.credit-label {
+    width: 200px;
+    height: 200px;
+    background-color: #E9C20A;
+    border-radius: 0 0 0 200px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    transform: translate(50%; -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.credit-label span {
+    transform: rotate(45deg);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.first-row{
+    min-height: '64px'; 
+    display: 'flex'; 
+    justify-content: 'space-between'; 
+    align-items: 'center'; 
+    background-color: '#0248B8'; 
+    position: 'relative'
+}
+
+.logo{
+    display: 'flex';
+    align-items: 'center'
+}
+
+.navbar-brand{
+    display: 'flex'; 
+    align-items: 'center'; 
+    height: '100%'
+}
+
+.buttons{
+    display: 'flex'; 
+    justify-content: 'end';
+}
+
+.create-button{
+    margin-right: '10px'; 
+    background-color: '#fadb14';
+    border-color: '#fadb14'
+}
+
+.login-button{
+    color: 'white'; 
+    margin-right: '10px'
+}
+
+.cart-button{
+    font-size: '24px';
+    color: 'white'
+}
+
+.secod-row{
+    display: 'flex'; 
+    align-items: 'end'; 
+    align-content: 'end'; 
+    background-color: '#ffffff'
+}
+
+.menu-style{
+    flex: 1; 
+    min-width: 0
+}

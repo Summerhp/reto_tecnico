@@ -1,0 +1,156 @@
+[{
+        "id": "1",
+        "nombre": "Galaxy S21",
+        "marca": "Samsung",
+        "precio": 799.99,
+        "reviews": 1,
+        "categoria": "Celulares",
+        "favorito": true,
+        "imagen": "https://tienda.movistar.com.co/media/catalog/product/cache/ebd1de6550e0d0b8d8c505e2a09b56c4/s/2/s21fenegro01.jpg",
+        "informacion": {
+            "fabricante": "Samsung Electronics",
+            "peso": "169g",
+            "dimensiones": "151.7 x 71.2 x 7.9 mm",
+            "pais_de_origen": "Corea del Sur",
+            "numero_de_modelo": "SM-G991B",
+            "color": "Phantom Gray",
+            "material": "Vidrio y aluminio",
+            "cantidad_de_piezas": 1,
+            "caracteristicas_especiales": "5G, IP68 resistencia al agua, Wireless Charging",
+            "componentes_incluidos": "Teléfono, Cargador, Cable USB-C, Manual"
+        }
+    },
+    {
+        "id": "2",
+        "nombre": "iPhone 13",
+        "marca": "Apple",
+        "precio": 999.99,
+        "reviews": 5,
+        "categoria": "Celulares",
+        "favorito": false,
+        "imagen": "https://exitocol.vtexassets.com/arquivos/ids/16320625/apple-iphone-13-5g-128gb-blanco-estelar-nuevo.jpg?v=638100885873530000",
+        "informacion": {
+            "fabricante": "Apple Inc.",
+            "peso": "174g",
+            "dimensiones": "146.7 x 71.5 x 7.7 mm",
+            "pais_de_origen": "China",
+            "numero_de_modelo": "A2633",
+            "color": "Midnight",
+            "material": "Vidrio y aluminio",
+            "cantidad_de_piezas": 1,
+            "caracteristicas_especiales": "5G, Face ID, MagSafe",
+            "componentes_incluidos": "Teléfono, Cable USB-C a Lightning, Manual"
+        }
+    },
+    {
+        "id": "3",
+        "nombre": "Pixel 6",
+        "marca": "Google",
+        "precio": 599.99,
+        "reviews": 2,
+        "categoria": "Celulares",
+        "favorito": true,
+        "imagen": "https://m.media-amazon.com/images/I/61ruKkvVIxL.jpg",
+        "informacion": {
+            "fabricante": "Google LLC",
+            "peso": "207g",
+            "dimensiones": "158.6 x 74.8 x 8.9 mm",
+            "pais_de_origen": "China",
+            "numero_de_modelo": "GA01341",
+            "color": "Sorta Seafoam",
+            "material": "Vidrio y aluminio",
+            "cantidad_de_piezas": 1,
+            "caracteristicas_especiales": "5G, Titan M2 security, Wireless Charging",
+            "componentes_incluidos": "Teléfono, Cargador, Cable USB-C, Adaptador OTG, Manual"
+        }
+    },
+    {
+        "id": "4",
+        "nombre": "Xperia 1 III",
+        "marca": "Sony",
+        "precio": 1299.99,
+        "reviews": 4,
+        "categoria": "Celulares",
+        "favorito": false,
+        "imagen": "https://http2.mlstatic.com/D_Q_NP_609970-MLA48917373694_012022-O.webp",
+        "informacion": {
+            "fabricante": "Sony Corporation",
+            "peso": "186g",
+            "dimensiones": "165 x 71 x 8.2 mm",
+            "pais_de_origen": "Japón",
+            "numero_de_modelo": "XQ-BC72",
+            "color": "Frosted Black",
+            "material": "Vidrio y aluminio",
+            "cantidad_de_piezas": 1,
+            "caracteristicas_especiales": "4K HDR OLED, 120Hz, IP65/68 resistencia al agua",
+            "componentes_incluidos": "Teléfono, Cargador, Cable USB-C, Manual"
+        }
+    },
+    {
+        "id": "5",
+        "nombre": "Ninja ZX-10R",
+        "marca": "Kawasaki",
+        "precio": 15999.99,
+        "reviews": 3,
+        "categoria": "Motocicletas",
+        "favorito": false,
+        "imagen": "https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/2020_Ninja_ZX-10R_Performance_GN2_FRONT.jpg",
+        "informacion": {
+            "motor": "998cc, 4 tiempos, DOHC",
+            "potencia": "200 hp",
+            "peso": "207 kg",
+            "transmision": "6 velocidades",
+            "color": "Verde"
+        }
+    },
+    {
+        "id": "6",
+        "nombre": "CBR600RR",
+        "marca": "Honda",
+        "precio": 11799.99,
+        "reviews": 5,
+        "categoria": "Motocicletas",
+        "favorito": true,
+        "imagen": "https://img.remediosdigitales.com/fc045d/honda-cbr600rr-serie-carreras-2021-4/840_560.jpg",
+        "informacion": {
+            "motor": "599cc, 4 tiempos, DOHC",
+            "potencia": "113 hp",
+            "peso": "194 kg",
+            "transmision": "6 velocidades",
+            "color": "Rojo"
+        }
+    },
+    {
+        "id": "7",
+        "nombre": "YZF-R6",
+        "marca": "Yamaha",
+        "precio": 12199.99,
+        "reviews": 1,
+        "categoria": "Motocicletas",
+        "favorito": false,
+        "imagen": "https://m.media-amazon.com/images/I/61jc2me5ojL._AC_UF894,1000_QL80_.jpg",
+        "informacion": {
+            "motor": "599cc, 4 tiempos, DOHC",
+            "potencia": "117 hp",
+            "peso": "190 kg",
+            "transmision": "6 velocidades",
+            "color": "Negro"
+        }
+    },
+    {
+        "id": "8",
+        "nombre": "Panigale V2",
+        "marca": "Ducati",
+        "precio": 16995.00,
+        "reviews": 3,
+        "favorito": true,
+        "imagen": "https://ducatidetroit.com/wp-content/uploads/2023/01/IMG_1049.jpeg",
+        "informacion": {
+            "motor": "955cc, 4 tiempos, DOHC",
+            "potencia": "155 hp",
+            "peso": "176 kg",
+            "transmision": "6 velocidades",
+            "color": "Negro"
+        }
+    }
+]
