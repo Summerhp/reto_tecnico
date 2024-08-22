@@ -1,0 +1,126 @@
+.modalStyle .ant-modal-content {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+.body-modal{
+    padding-right: 30px;
+}
+
+.body2-modal{
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.button-modal {
+    background-color: #FFD300;
+    border-color: #FFD300;
+}
+
+.button-modal:hover {
+    background-color: #004AC1;
+    border-color: #004AC1;
+}
+
+.img-modal{
+    width: 520px;
+}
+
+.product-modal{
+    width: 150px;
+}
+
+.row-price{
+    height: 20px; 
+    margin-bottom: 20px;
+}
+
+.p-price{
+    color: #004AC1;
+}
+
+.row-name{
+    height: 20px; 
+    margin-bottom: 5px;
+}
+
+.p-color{
+    color: #7D879C;
+}
+.span-color{
+    font-weight: bold;
+}
+
+.row-item{
+    border-top: 1px solid #B4B4B4; 
+    border-bottom: 1px solid #B4B4B4; 
+    padding: 10px;
+}
+
+.col-subtotal{
+    text-align: end;
+}
+
+.span-subtotal{
+    color: #004AC1;
+}
+
+.div-check{
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    border: 2px solid #FFD300; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.check{
+    color: #004AC1; 
+    font-size: 30px;
+}
+
+.h2-text{
+    text-align: center;
+}
+
+.button-buy{
+    padding: 30px;
+    background-color: #fadb14; 
+    border-color: #fadb14; 
+    color: #000000;
+}
+
+.row-espaciado{
+    margin-bottom: 16px;
+}
+
+.div-izq{
+    border-bottom: 1px solid #ccc; 
+    width: 100%;
+}
+
+.col-mid{
+    text-align: center; 
+    color: #B4B4B4; 
+    font-style: italic
+}
+
+.p-mid{
+    margin: 0;
+}
+
+.div-der{
+    border-bottom: 1px solid #ccc; 
+    width: 100%;
+}
+
+.row-contado{
+    height: 30px;
+}
+
+.p-contado{
+    color: #004AC1;
+    margin-top: 0px;
+}

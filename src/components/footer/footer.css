@@ -1,0 +1,80 @@
+.footer{
+    align-content: end; 
+    background-image: url('../../assets/img/Vector 4.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 500px;
+}
+
+.div-form{
+    text-align: end;
+    margin-bottom: 40px;
+}
+
+.form{
+    max-width: 600; 
+    border-bottom: 2px solid #000000;
+    text-align: center;
+}
+
+.custom-input {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 5px 0;
+    width: 500px;
+    height: 'auto';
+}
+
+.custom-input:focus,
+.custom-input:hover {
+    border-color: #004AC1;
+    box-shadow: none;
+}
+
+.custom-input .ant-input {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.row-list{
+    align-items: center;
+}
+
+.col-logo{
+    background-color: #0038AE; 
+    border: 10px solid #0038AE; 
+    border-radius: 15px;
+}
+
+.col-smile{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.img-smile{
+    width: 60%;
+}
+
+.col-rrss{
+    align-items: center; 
+    justify-content: center; 
+    align-content: center;
+}
+
+.h1-rrss{
+    font-size: 40px;
+}
+
+.p-rrss{
+    font-size: 15px;
+}
+
+.rrss{
+    font-size: 40px; 
+    color: black 
+}
