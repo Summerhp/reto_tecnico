@@ -5,6 +5,9 @@ import ProductGrid from '../../components/productGrid';
 import SortSelect from '../../components/sortProduct';
 import SearchForm from '../../components/searchProduct';
 import data from '../../utils/data.json';
+import Carrusel from '../../components/carousel';
+import carousel from '../../assets/img/Carousel.png'
+import ProductsOften from '../../components/productsOften';
 
 interface Product {
   id: string;
@@ -45,10 +48,9 @@ const Products: React.FC = () => {
       const fullName = `${product.marca.toLowerCase()} ${product.nombre.toLowerCase()}`;
       const matchesSearchTerm = fullName.includes(searchTerm.toLowerCase());
 
-      const matchesCategory =
-        selectedCategory === 'all-categories' || product.categoria.toLowerCase() === selectedCategory.toLowerCase();
+      const matchesCategory = selectedCategory === 'all-categories' || product.categoria.toLowerCase() === selectedCategory.toLowerCase();
+      const matchesBrands = selectedFilters.brands.length === 0 || selectedFilters.brands.map(brand => brand.name).includes(product.marca);
 
-      const matchesBrands = selectedFilters.brands.length === 0 || selectedFilters.brands.includes(product.marca);
       const matchesReviews = product.reviews >= selectedFilters.reviews;
 
       const matchesPrice =
@@ -82,11 +84,13 @@ const Products: React.FC = () => {
 
   const handleFiltersChange = (filters) => {
     setSelectedFilters(filters);
-};
+  };
 
   const toggleFavorite = (id: string) => {
     
   };
+  const images = [carousel, carousel, carousel];
+  
 
   return (
     <>
@@ -106,6 +110,8 @@ const Products: React.FC = () => {
           <ProductGrid products={filteredProducts} toggleFavorite={toggleFavorite} />
         </Col>
       </Row>
+      <Carrusel images={images}></Carrusel>
+      <ProductsOften></ProductsOften>
     </>
   );
 };

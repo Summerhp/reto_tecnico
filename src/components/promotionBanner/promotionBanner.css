@@ -1,0 +1,95 @@
+
+.div-icon{
+        position: relative !important;
+        background-image: url('../../assets/img/Vector 5.png') !important;
+        background-size: 100% 100% !important;
+        background-position: start !important;
+        background-repeat: no-repeat !important;
+        min-height: 164px !important;
+}
+
+.h1-circle{
+    color: #013E9B !important; 
+    margin-top: 40px !important; 
+    margin-left: 10px !important;
+}
+.p-d{
+    color: #ffffff !important; 
+    margin: 0 
+}
+
+.p-price{
+    color: #ffffff !important; 
+    text-align: end !important; 
+    font-size: 30px !important; 
+    margin: 0
+}
+
+.p-week{
+    color: #ffffff !important; 
+    text-align: end !important; 
+    margin: 0 !important;
+}
+
+.row-credit{
+    background: #ffffff !important; 
+    border-radius: 10px !important;
+    padding: 20px !important;
+}
+
+.col-container {
+    text-align: center !important;
+}
+  
+.col-container:not(:last-child) {
+    border-right: 1px solid #e0e0e0 !important;
+}
+  
+.div-step{
+    font-size: 24px !important;
+    color: #ffffff !important;
+    background: #4B566B !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    
+}
+
+.p-text{
+    font-weight: bold !important; 
+    color: #4B566B !important; 
+    text-align: start !important; 
+    font-size: 18px !important;
+}
+
+.row-button{
+    margin-right: 30px !important;
+}
+
+.div-button{
+    text-align: right !important;
+}
+.button-credit{
+    padding: 30px !important; 
+    margin-bottom: 20px !important; 
+    background: #ffcc00 !important; 
+    color: #002f87 !important; 
+    font-weight: bold !important;
+}
+
+.arrow{
+    font-size: 24px !important;
+    color: #ffffff !important;
+    background: #004AC1 !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 10px !important;
+}

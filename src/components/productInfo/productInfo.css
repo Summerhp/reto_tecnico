@@ -1,0 +1,44 @@
+.col-name{
+    margin-left: 50px;
+}
+.h1-product{
+    font-size: 2rem;
+}
+.col-price{
+    text-align: right;
+}
+.h1-price{
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #004AC1;
+}
+.icon-card{
+    font-size: 50px;
+}
+.col-p{
+    margin-left: 50px; 
+    margin-right: 30px;
+}
+.row-security{
+    margin-right: 30px;
+}
+
+.row-container{
+    background-color: #D3D8E0 ;
+    border: 2px solid #D3D8E0;
+    border-radius: 15px;
+}
+.row-icon{
+    display: 'flex'; 
+    justify-content: 'center'; 
+    align-items: 'center'
+}
+
+.col-text{
+    margin-left: 10px; 
+    margin-right: 30px;
+}
+
+.row-text{
+    margin-right: 30px
+}
