@@ -5,14 +5,11 @@ import modalImage from '../../assets/img/Modal.png';
 import './modal.css';
 
 interface ProductModalProps {
-    show: boolean;
-    handleClose: () => void;
     product: {
         id: string;
         nombre: string;
         marca: string;
         precio: number;
-        reviews: number;
         imagen: string;
         informacion: JSON;
     };

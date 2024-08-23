@@ -1,0 +1,22 @@
+.div-filters{
+    background-color: white; 
+    padding: 15px; 
+    margin-right: 80px;
+}
+
+.h3-titles{
+    color: #013E9B;
+}
+
+.div-checkbox{
+    max-height: 200px; 
+    overflow: 'auto';
+}
+
+.checkbox-group{
+    width: 30px;
+}
+
+.form-items{
+    height: 5px;
+}

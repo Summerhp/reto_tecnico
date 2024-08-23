@@ -1,3 +1,6 @@
+.cardStyle{
+    width: 18rem
+}
 .cardStyle .ant-card-head {
     padding: 0;
     margin: 0;
@@ -24,4 +27,67 @@
 .cardStyle .ant-card-body{
     padding: 10px;
     height: 180px;
+}
+
+.div-card{
+    margin-right: 2rem; 
+    margin-bottom: 2rem; 
+    background-color: #EBEFF4;
+}
+
+.button-heart{
+    font-size: 35px; 
+    padding: 0px; 
+    height: auto;
+}
+
+.img-card{
+    width: 288px; 
+    height: 288px;
+}
+
+.div-discount{
+    width: 70px; 
+    height: 70px; 
+    position: absolute; 
+    bottom: 180px; 
+    left: 10px; 
+    background-color: #FF4D4F; 
+    color: #FFFFFF; 
+    border-radius: 100%; 
+    font-size: 25px; 
+    font-weight: bold; 
+    align-content: center; 
+    text-align: center;
+}
+
+.p-discount{
+    margin: 0;
+}
+
+.a-name{
+    color: '#000'
+}
+
+.p-pricetime{
+    color: #7D879C
+}
+
+.col-price{
+    text-align: right
+}
+
+.h2-price{
+    font-size: 1.75rem; 
+    font-weight: bold; 
+    color: #004AC1; 
+    margin: 0px;
+}
+
+.h3-oldprice{
+    margin: 0px; 
+    margin-bottom: 50px; 
+    color: #7D879C; 
+    font-weight: normal; 
+    text-decoration: line-through;
 }

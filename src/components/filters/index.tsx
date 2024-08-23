@@ -1,0 +1,91 @@
+import React, { useState } from 'react';
+import { Form, Checkbox, Row, Col, InputNumber } from 'antd';
+import { renderStars } from '../../utils/renderStars';
+
+interface Brand {
+    id: number;
+    name: string;
+}
+
+interface FiltersProps {
+    brands: Brand[];
+    onFiltersChange: (filters: { brands: string[]; reviews: number; priceRange: { min: number; max: number } }) => void;
+}
+
+const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
+
+    const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
+    const [selectedReviews, setSelectedReviews] = useState<number>(0);
+    const [priceRange, setPriceRange] = useState<{ min: number; max: number }>({ min: 0, max: Infinity });
+    const [filledStars, setFilledStars] = useState<number>(0)
+
+    const handleBrandChange = (checkedValues: any) => {
+        setSelectedBrands(checkedValues);
+        onFiltersChange({ brands: checkedValues, reviews: selectedReviews, priceRange });
+    };
+
+    const handleReviewsChange = (reviews: number) => {
+        if (reviews === filledStars) {
+            setFilledStars(0);
+            setSelectedReviews(0);
+            onFiltersChange({ brands: selectedBrands, reviews: 0, priceRange });
+        } else {
+            setFilledStars(reviews);
+            setSelectedReviews(reviews);
+            onFiltersChange({ brands: selectedBrands, reviews, priceRange });
+        }
+    };
+
+    const handlePriceChange = (min: number, max: number) => {
+        setPriceRange({ min, max });
+        console.log(min, max)
+        onFiltersChange({ brands: selectedBrands, reviews: selectedReviews, priceRange: { min, max } });
+    };
+
+    return (
+        <div className='div-filters'>
+            <div>
+                <div>
+                    <h3 className='h3-titles'>Marcas</h3>
+                    <div className='div-checkbox'>
+                        <Checkbox.Group className='checkbox-group' onChange={handleBrandChange}>
+                            {brands.map((brand, index) => (
+                                <Form.Item className='form-items' key={index}>
+                                    <Checkbox onChange={handleBrandChange} value={brand} id={String(brand.id)}>
+                                        {brand}
+                                    </Checkbox>
+                                </Form.Item>
+                            ))}
+                        </Checkbox.Group>
+                    </div>
+                </div>
+                <div>
+                    <h3 className='h3-titles'>Precio</h3>
+                    <Row gutter={16}>
+                        <Col span={10}>
+                            <Form.Item htmlFor="minPrice">
+                                <InputNumber onChange={(value) => handlePriceChange(value, priceRange.max)} type="number" id="minPrice" placeholder="100" min={0} max={Infinity} />
+                            </Form.Item>
+                        </Col>
+                        <Col>
+                            -
+                        </Col>
+                        <Col span={10}>
+                            <Form.Item htmlFor="maxPrice">
+                                <InputNumber onChange={(value) => handlePriceChange(priceRange.min, value)} id="maxPrice" placeholder="5000" min={0} max={Infinity} />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                </div>
+                <div>
+                    <h3 className='h3-titles'>Reviews</h3>
+                    <Row>
+                        {renderStars({rating: selectedReviews, handleReviewsChange: handleReviewsChange})}
+                    </Row>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Filters;
