@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         label: `${key}`,
     }));
     return (
-        <>
+        <div className='navbar'>
             <Layout>
                 <Row className='first-row'>
                     <Col span={2} offset={1}>
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
                     <Menu className='menu' mode="horizontal" defaultSelectedKeys={['2']} items={items} />
                 </Header>
             </Layout>
-        </>
+        </div>
     );
 };
 

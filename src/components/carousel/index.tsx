@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel, Row, Col } from 'antd';
+import './carousel.css'
 
 interface CarruselProps {
     images: string[];

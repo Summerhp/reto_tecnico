@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Checkbox, Row, Col, InputNumber } from 'antd';
 import { renderStars } from '../../utils/renderStars';
+import './filters.css'
 
 interface Brand {
-    id: number;
     name: string;
 }
 
@@ -38,7 +38,6 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
 
     const handlePriceChange = (min: number, max: number) => {
         setPriceRange({ min, max });
-        console.log(min, max)
         onFiltersChange({ brands: selectedBrands, reviews: selectedReviews, priceRange: { min, max } });
     };
 
@@ -51,8 +50,8 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
                         <Checkbox.Group className='checkbox-group' onChange={handleBrandChange}>
                             {brands.map((brand, index) => (
                                 <Form.Item className='form-items' key={index}>
-                                    <Checkbox onChange={handleBrandChange} value={brand} id={String(brand.id)}>
-                                        {brand}
+                                    <Checkbox onChange={handleBrandChange} value={brand}>
+                                        {brand.name}
                                     </Checkbox>
                                 </Form.Item>
                             ))}

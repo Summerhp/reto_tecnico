@@ -5,7 +5,6 @@
         "precio": 799.99,
         "reviews": 1,
         "categoria": "Celulares",
-        "favorito": true,
         "imagen": "https://tienda.movistar.com.co/media/catalog/product/cache/ebd1de6550e0d0b8d8c505e2a09b56c4/s/2/s21fenegro01.jpg",
         "informacion": {
             "fabricante": "Samsung Electronics",
@@ -27,7 +26,6 @@
         "precio": 999.99,
         "reviews": 5,
         "categoria": "Celulares",
-        "favorito": false,
         "imagen": "https://exitocol.vtexassets.com/arquivos/ids/16320625/apple-iphone-13-5g-128gb-blanco-estelar-nuevo.jpg?v=638100885873530000",
         "informacion": {
             "fabricante": "Apple Inc.",
@@ -49,7 +47,6 @@
         "precio": 599.99,
         "reviews": 2,
         "categoria": "Celulares",
-        "favorito": true,
         "imagen": "https://m.media-amazon.com/images/I/61ruKkvVIxL.jpg",
         "informacion": {
             "fabricante": "Google LLC",
@@ -71,7 +68,6 @@
         "precio": 1299.99,
         "reviews": 4,
         "categoria": "Celulares",
-        "favorito": false,
         "imagen": "https://http2.mlstatic.com/D_Q_NP_609970-MLA48917373694_012022-O.webp",
         "informacion": {
             "fabricante": "Sony Corporation",
@@ -93,7 +89,6 @@
         "precio": 15999.99,
         "reviews": 3,
         "categoria": "Motocicletas",
-        "favorito": false,
         "imagen": "https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/2020_Ninja_ZX-10R_Performance_GN2_FRONT.jpg",
         "informacion": {
             "motor": "998cc, 4 tiempos, DOHC",
@@ -110,7 +105,6 @@
         "precio": 11799.99,
         "reviews": 5,
         "categoria": "Motocicletas",
-        "favorito": true,
         "imagen": "https://img.remediosdigitales.com/fc045d/honda-cbr600rr-serie-carreras-2021-4/840_560.jpg",
         "informacion": {
             "motor": "599cc, 4 tiempos, DOHC",
@@ -127,7 +121,6 @@
         "precio": 12199.99,
         "reviews": 1,
         "categoria": "Motocicletas",
-        "favorito": false,
         "imagen": "https://m.media-amazon.com/images/I/61jc2me5ojL._AC_UF894,1000_QL80_.jpg",
         "informacion": {
             "motor": "599cc, 4 tiempos, DOHC",
@@ -143,7 +136,7 @@
         "marca": "Ducati",
         "precio": 16995.00,
         "reviews": 3,
-        "favorito": true,
+        "categoria": "Motocicletas",
         "imagen": "https://ducatidetroit.com/wp-content/uploads/2023/01/IMG_1049.jpeg",
         "informacion": {
             "motor": "955cc, 4 tiempos, DOHC",

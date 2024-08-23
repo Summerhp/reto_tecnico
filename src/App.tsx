@@ -1,15 +1,19 @@
-import './App.css'
-import NavBar from './components/navbar';
-import Footer from './components/footer';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Products from './pages/Products';
+import Navbar from './components/navbar';
+import Footer2 from './components/footer';
+import ProductDetail from './pages/ProductDetail'
 
-function App() {
-
+const App: React.FC = () => {
   return (
-    <>
-      <NavBar></NavBar>
-      <Footer></Footer>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<><Navbar/><Products /><Footer2/></>} />
+        {/* <Route path="/product/:id" element={<ProductDetail/>} /> */}
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
