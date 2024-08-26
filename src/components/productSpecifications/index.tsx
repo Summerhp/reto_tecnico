@@ -39,7 +39,7 @@ const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({ product }
                             {product.informacion.transmision && (<Descriptions.Item label="Transmisión: ">{product.informacion.transmision}</Descriptions.Item>)}
                         </Descriptions>
                     </TabPane>
-                    <TabPane tab="Reviews (3)" key="2">
+                    <TabPane tab="Reviews" key="2">
                         
                     </TabPane>
                 </Tabs>

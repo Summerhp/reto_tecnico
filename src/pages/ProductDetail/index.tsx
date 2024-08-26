@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Breadcrumb, Row, Col, Button, Image, Space, Descriptions, Tabs, Typography, List, Slider } from 'antd';
+import { Row, Col } from 'antd';
 import { useParams } from 'react-router-dom';
 import ProductGrid from '../../components/productGrid';
-import { StarFilled, StarOutlined, CreditCardOutlined, ArrowRightOutlined, CheckOutlined, HeartFilled, HeartOutlined } from '@ant-design/icons';
 import MenuTop from '../../components/breadcrum';
 import './productDetail.css';
 import data from '../../utils/data.json';
@@ -13,8 +12,6 @@ import PromotionBanner from '../../components/promotionBanner';
 import ProductDetailInfo from '../../components/productDetailPhoto';
 import ProductSpecifications from '../../components/productSpecifications';
 import CreditOffer from '../../components/productOffer';
-
-const { Title, Text } = Typography;
 
 interface Product {
     id: string;
@@ -58,7 +55,7 @@ const ProductDetail: React.FC = () => {
         <>
             <MenuTop marca={product.marca} nombre={product.nombre}></MenuTop>
             <Row>
-                <ProductGallery product={{ imagen: product.imagen }} changeHeart={changeHeart} isHeartFilled={isHeartFilled}></ProductGallery>
+                <ProductGallery  product={{id: product.id, imagen: product.imagen }} changeHeart={changeHeart} isHeartFilled={isHeartFilled}></ProductGallery>
                 <Col span={14}>
                     <ProductInfo product={product} renderStars={(reviews) => renderStars({ rating: reviews })} />
                     <PromotionBanner price={(product.precio / 3)}></PromotionBanner>

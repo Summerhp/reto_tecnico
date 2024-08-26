@@ -13,7 +13,7 @@ interface SearchFormProps {
 const SearchForm: React.FC<SearchFormProps> = ({ setSearchTerm, setSelectedCategory }) => {
     return (
         <Form>
-            <Row align={'middle'}>
+            <Row className={styles.rowSearch} align={'middle'}>
                 <Col span={12}>
                     <Form.Item>
                         <Input className={styles['input-product']} onChange={(e) => setSearchTerm(e.target.value)} prefix={<SearchOutlined />} placeholder="Encuentra el producto que necesitas." />

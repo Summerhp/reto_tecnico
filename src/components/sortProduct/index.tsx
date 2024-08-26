@@ -10,7 +10,7 @@ interface SortSelectProps {
 
 const SortSelect: React.FC<SortSelectProps> = ({ setSortOrder }) => {
   return (
-    <Row>
+    <Row align={'middle'}>
       <Col span={6} offset={6}>
         Ordenar por:
       </Col>
