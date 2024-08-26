@@ -1,84 +1,86 @@
 
 .div-icon{
-        position: relative !important;
-        background-image: url('../../assets/img/Vector 5.png') !important;
-        background-size: 100% 100% !important;
-        background-position: start !important;
-        background-repeat: no-repeat !important;
-        min-height: 164px !important;
+        position: relative;
+        background-image: url('../../assets/img/Vector 5.png');
+        background-size: 100% 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 150px;
+        padding-right: 10px;
 }
 
 .h1-circle{
-    color: #013E9B !important; 
-    margin-top: 40px !important; 
-    margin-left: 10px !important;
+    color: #013E9B; 
+    margin-top: 65px; 
+    margin-left: 15px;
 }
 .p-d{
-    color: #ffffff !important; 
-    margin: 0 
+    color: #ffffff; 
+    margin: 0; 
+    margin-top: 35px; 
 }
 
 .p-price{
-    color: #ffffff !important; 
-    text-align: end !important; 
-    font-size: 30px !important; 
+    color: #ffffff; 
+    text-align: end; 
+    font-size: 30px; 
     margin: 0
 }
 
 .p-week{
-    color: #ffffff !important; 
-    text-align: end !important; 
-    margin: 0 !important;
+    color: #ffffff; 
+    text-align: end; 
+    margin: 0;
 }
 
 .row-credit{
-    background: #ffffff !important; 
-    border-radius: 10px !important;
-    padding: 20px !important;
+    background: #ffffff; 
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .col-container {
-    text-align: center !important;
+    text-align: left;
 }
   
 .col-container:not(:last-child) {
-    border-right: 1px solid #e0e0e0 !important;
+    border-right: 1px solid #e0e0e0;
 }
   
 .div-step{
-    font-size: 24px !important;
-    color: #ffffff !important;
-    background: #4B566B !important;
-    border-radius: 50% !important;
-    width: 40px !important;
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto !important;
+    font-size: 24px;
+    color: #ffffff;
+    background: #4B566B;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
     
 }
 
 .p-text{
-    font-weight: bold !important; 
-    color: #4B566B !important; 
-    text-align: start !important; 
-    font-size: 18px !important;
+    font-weight: bold; 
+    color: #4B566B; 
+    text-align: start; 
+    font-size: 18px;
 }
 
 .row-button{
-    margin-right: 30px !important;
+    margin-right: 30px;
 }
 
 .div-button{
-    text-align: right !important;
+    text-align: right;
 }
 .button-credit{
-    padding: 30px !important; 
-    margin-bottom: 20px !important; 
-    background: #ffcc00 !important; 
-    color: #002f87 !important; 
-    font-weight: bold !important;
+    padding: 30px; 
+    margin-bottom: 20px; 
+    background: #ffcc00; 
+    color: #002f87; 
+    font-weight: bold;
 }
 
 .arrow{

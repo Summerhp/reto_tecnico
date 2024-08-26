@@ -1,0 +1,73 @@
+.mainRow {
+    min-height: 558px;
+    background-image: url('../../assets/img/Vector 3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colRq{
+    border-radius: 8px; 
+    padding: 20px;
+}
+.titleCredid{
+    color: #ffffff !important;
+}
+.subtitleCredit{
+    color: #FFD300; 
+    font-size: 18px;
+}
+.listRq{
+    margin-top: 10px; 
+    color: #FFFF00;
+}
+.itemRq{
+    color: #FFFFFF !important; 
+    font-size: 16px;
+}
+.checkItem{
+    margin-right: 8px; 
+    color: #A2D456
+}
+.colEnganche{
+    background: #fff; 
+    border-radius: 8px;
+}
+
+.divContainer{
+    margin: 20px; 
+    height: 400px; 
+    align-content: center;
+}
+
+.divInfo{
+    text-align: center;
+}
+
+.divFace{
+    font-size: 48px; 
+    color: 0049A1; 
+    margin-bottom: 10px;
+}
+.textEnganche{
+    font-size: 17px;
+}
+.divSlider{
+    margin-top: 20px;
+}
+.sliderEnganche{
+    margin-bottom: 10px;
+}
+
+.buttonApply{
+    background: #FFD300; 
+    color: #004AC1; 
+    font-size: 25px; 
+    padding: 30px; 
+    font-weight: bold;
+}
+.textClarification{
+    display: block; 
+    margin-top: 10px; 
+    font-size-adjust: 12px; 
+    text-align: center;
+}

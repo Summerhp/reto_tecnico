@@ -13,13 +13,13 @@ const PromotionBanner: React.FC<PromotionBannerProps> = ({ price }) => {
             <Row className={styles['row-icon']}  align="top">
                 <Col span={5}>
                     <div className={styles['div-icon']} >
-                        <Row align="middle" justify="center">
+                        <Row>
                             <Col span={10}>
                                 <h1 className={styles['h1-circle']} >HOY</h1>
                             </Col>
                             <Col span={10} offset={3} pull={1}>
                                 <p className={styles['p-d']} >DESDE</p>
-                                <p className={styles['p-price']} >${price}</p>
+                                <p className={styles['p-price']} >${price.toFixed()}</p>
                                 <p className={styles['p-week']} >SEMANAL</p>
                             </Col>
                         </Row>
@@ -27,25 +27,25 @@ const PromotionBanner: React.FC<PromotionBannerProps> = ({ price }) => {
                 </Col>
 
                 <Col span={18}>
-                    <Row className='row-credit' justify="space-between">
+                    <Row className={styles['row-credit']} justify="space-between">
                         {['¡Aplica a tu crédito!', 'Verifica tu compra', 'Disfruta tu celular'].map((text, index) => (
-                            <Col key={index} span={7} className="col-container">
+                            <Col key={index} span={7} className={styles['col-container']}>
                                 <div>
-                                    <div className='div-step'>
+                                    <div className={styles['div-step']} >
                                         {index + 1}
                                     </div>
-                                    <p className='p-text'>{text}</p>
+                                    <p className={styles['p-text']} >{text}</p>
                                 </div>
                             </Col>
                         ))}
                     </Row>
                 </Col>
             </Row>
-            <Row className='row-button' justify="end">
-                <div className='div-button'>
-                    <Button className='button-credit' type="primary">
+            <Row className={styles['row-button']}  justify="end">
+                <div className={styles['div-button']} >
+                    <Button className={styles['button-credit']}  type="primary">
                         LO QUIERO A CRÉDITO
-                        <ArrowRightOutlined className='arrow'/>
+                        <ArrowRightOutlined className={styles['arrow']} />
                     </Button>
                 </div>
             </Row>
