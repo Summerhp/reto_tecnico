@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Breadcrumb, Button } from 'antd';
-import './breadcrum.css'
+import styles from './breadcrum.module.css';
 
 interface MenuTopProps {
     marca: string;
@@ -9,7 +9,7 @@ interface MenuTopProps {
 
 const MenuTop: React.FC<MenuTopProps> = ({marca, nombre}) => {
     return (
-        <Row className='row-menutop' align={'middle'} justify={'start'}>
+        <Row className={styles['row-menutop']} align={'middle'} justify={'start'}>
             <Col span={3} offset={1}>
                 <a className="navbar-brand" href="/">
                     <Button>

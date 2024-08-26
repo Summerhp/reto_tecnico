@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Row, Col } from 'antd';
-import './carousel.css'
+import styles from './carousel.module.css'
 
 interface CarruselProps {
     images: string[];
@@ -9,11 +9,11 @@ interface CarruselProps {
 const Carrusel: React.FC<CarruselProps> = ({ images }) => {
     return (
         <Row>
-            <Col className='col-carousel' span={20} offset={2}>
+            <Col className={styles['col-carousel']} span={20} offset={2}>
                 <Carousel arrows infinite={false}>
                     {images.map((image, index) => (
                         <div key={index}>
-                            <img className='img-carousel' src={image} alt={`slide-${index}`} />
+                            <img className={styles['img-carousel']} src={image} alt={`slide-${index}`} />
                         </div>
                     ))}
                 </Carousel>

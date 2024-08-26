@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Checkbox, Row, Col, InputNumber } from 'antd';
 import { renderStars } from '../../utils/renderStars';
-import './filters.css'
+import styles from './filters.module.css'
 
 interface Brand {
     name: string;
@@ -43,14 +43,14 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
     };
 
     return (
-        <div className='div-filters'>
+        <div className={styles['div-filters']}>
             <div>
                 <div>
-                    <h3 className='h3-titles'>Marcas</h3>
-                    <div className='div-checkbox'>
-                        <Checkbox.Group className='checkbox-group' onChange={handleBrandChange}>
+                    <h3 className={styles['h3-titles']}>Marcas</h3>
+                    <div className={styles['div-checkbox']}>
+                        <Checkbox.Group className={styles['checkbox-group']} onChange={handleBrandChange}>
                             {brands.map((brand, index) => (
-                                <Form.Item className='form-items' key={index}>
+                                <Form.Item className={styles['form-items']} key={index}>
                                     <Checkbox onChange={handleBrandChange} value={brand}>
                                         {brand.name}
                                     </Checkbox>
@@ -60,7 +60,7 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
                     </div>
                 </div>
                 <div>
-                    <h3 className='h3-titles'>Precio</h3>
+                    <h3 className={styles['h3-titles']}>Precio</h3>
                     <Row gutter={16}>
                         <Col span={10}>
                             <Form.Item htmlFor="minPrice">
@@ -78,7 +78,7 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
                     </Row>
                 </div>
                 <div>
-                    <h3 className='h3-titles'>Reviews</h3>
+                    <h3 className={styles['h3-titles']}>Reviews</h3>
                     <Row>
                         {renderStars({rating: selectedReviews, handleReviewsChange: handleReviewsChange})}
                     </Row>

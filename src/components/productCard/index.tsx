@@ -3,7 +3,8 @@ import { Card, Button, Row, Col } from 'antd';
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import ProductModal from '../productModal';
 import { renderStars } from '../../utils/renderStars';
-import './card.css';
+import './antdCard.css';
+import styles from './card.module.css';
 
 interface ProductCardProps {
     product: {
@@ -29,28 +30,28 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, toggleFavorite }) =>
 
     return (
         <>
-            <div className='div-card'>
-                <Card className="cardStyle" extra={<Button type="text" className='button-heart' onClick={() => changeHeart()}>{isHeartFilled ? <HeartFilled /> : <HeartOutlined />}</Button>} hoverable cover={
+            <div className={styles['div-card']}>
+                <Card className={styles.cardStyle} extra={<Button type="text" className='button-heart' onClick={() => changeHeart()}>{isHeartFilled ? <HeartFilled /> : <HeartOutlined />}</Button>} hoverable cover={
                     <a href={`/product/${product.id}`}>
                         <div>
-                            <img className='img-card' src={product.imagen} alt={product.nombre} />
-                            <div className='div-discount'>
-                                <p className='p-discount'>40%</p>
+                            <img className={styles['img-card']} src={product.imagen} alt={product.nombre} />
+                            <div className={styles['div-discount']}>
+                                <p className={styles['p-discount']}>40%</p>
                             </div>
                         </div>
                     </a>
                 }>
-                    <Row>
+                    <Row className={styles.cardBody}>
                         <Col span={12}>
-                            <a className='a-name' href={`/product/${product.id}`}>
+                            <a className={styles['a-name']} href={`/product/${product.id}`}>
                                 <h4>{product.marca} {product.nombre}</h4>
                             </a>
                             {renderStars({rating: product.reviews})}
-                            <p className='p-pricetime'>$120 p/semana o $520 p/mes</p>
+                            <p className={styles['p-pricetime']}>$120 p/semana o $520 p/mes</p>
                         </Col>
-                        <Col span={12} className='col-price'>
-                            <h2 className='h2-price'>${product.precio.toFixed(2)}</h2>
-                            <h3 className='h3-oldprice'>$99999</h3>
+                        <Col span={12} className={styles['col-price']}>
+                            <h2 className={styles['h2-price']}>${product.precio.toFixed(2)}</h2>
+                            <h3 className={styles['h3-oldprice']}>$99999</h3>
                             <ProductModal product={product} />
                         </Col>
                     </Row>

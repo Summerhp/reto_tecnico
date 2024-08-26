@@ -1,32 +1,12 @@
 .cardStyle{
     width: 18rem
 }
-.cardStyle .ant-card-head {
-    padding: 0;
-    margin: 0;
-    display: block;
-    height: 0;
-    min-height: 0;
-}
 
-.cardStyle .ant-card-cover {
-    height: 288.4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.cardStyle .ant-card-cover img {
+.img-card{
     height: 288px;    
     width: 288px;
     object-fit: cover;
     object-position: center;
-}
-
-.cardStyle .ant-card-body{
-    padding: 10px;
-    height: 180px;
 }
 
 .div-card{
@@ -44,9 +24,9 @@
 .div-discount{
     width: 70px; 
     height: 70px; 
-    position: absolute !important; 
-    bottom: 180px !important; 
-    left: 10px !important; 
+    position: absolute; 
+    bottom: 180px; 
+    left: 10px; 
     background-color: #FF4D4F; 
     color: #FFFFFF; 
     border-radius: 100%; 
