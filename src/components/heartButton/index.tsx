@@ -19,7 +19,7 @@ const HeartButton: React.FC<HeartButtonProps> = ({ id, isHeartFilled, toggleFavo
                 [styles['card-heart']]: variant === 'card',
                 [styles['product-photos-heart']]: variant === 'productPhotos',
             })}
-            onClick={toggleFavorite(id)}
+            onClick={()=>toggleFavorite(id)}
         >
             {isHeartFilled ? <HeartFilled /> : <HeartOutlined />}
         </Button>

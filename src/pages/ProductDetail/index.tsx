@@ -47,15 +47,16 @@ const ProductDetail: React.FC = () => {
         return <div>Producto no encontrado</div>;
     }
     const [isHeartFilled, setIsHeartFilled] = useState(false);
-    const changeHeart = () => {
+    const toggleFavorite = (productId: string) => {
+
         setIsHeartFilled(!isHeartFilled);
-    }
+    };
     const relatedProducts = allProducts.filter((prod) => prod.categoria === product.categoria && prod.id !== id).slice(0, 4);
     return (
         <>
             <MenuTop marca={product.marca} nombre={product.nombre}></MenuTop>
             <Row>
-                <ProductGallery  product={{id: product.id, imagen: product.imagen }} changeHeart={changeHeart} isHeartFilled={isHeartFilled}></ProductGallery>
+                <ProductGallery product={{ imagen: product.imagen }} toggleFavorite={toggleFavorite} isHeartFilled={isHeartFilled}></ProductGallery>
                 <Col span={14}>
                     <ProductInfo product={product} renderStars={(reviews) => renderStars({ rating: reviews })} />
                     <PromotionBanner price={(product.precio / 3)}></PromotionBanner>

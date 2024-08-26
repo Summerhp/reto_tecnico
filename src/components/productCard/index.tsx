@@ -3,6 +3,7 @@ import { Card, Button, Row, Col } from 'antd';
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import ProductModal from '../productModal';
 import { renderStars } from '../../utils/renderStars';
+import HeartButton from '../heartButton';
 import './antdCard.css';
 import styles from './card.module.css';
 
@@ -31,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, toggleFavorite }) =>
     return (
         <>
             <div className={styles['div-card']}>
-                <Card className={styles.cardStyle} extra={<Button type="text" className={styles['button-heart']} onClick={() => changeHeart()}>{isHeartFilled ? <HeartFilled /> : <HeartOutlined />}</Button>} hoverable cover={
+                <Card className={styles.cardStyle} extra={<HeartButton isHeartFilled={isHeartFilled} toggleFavorite={changeHeart} variant="productPhotos" />} hoverable cover={
                     <a href={`/product/${product.id}`}>
                         <div>
                             <img className={styles['img-card']} src={product.imagen} alt={product.nombre} />
