@@ -1,0 +1,41 @@
+.col-photos{
+    flex-direction: column;
+    gap: 10px;
+}
+.image-col{
+    height: 150px !important; 
+    width: 150px !important; ;
+}
+.div-photo{
+    position: relative;
+}
+.image-div{
+    height: 600px !important;
+}
+.button-heart{
+    font-size: 35px;
+    padding: 0px; 
+    height: auto; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1;
+}
+.div-discount{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #FF4D4F;
+    color: #FFFFFF;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+}
+
+.p-discount{
+    margin: 0;
+}

@@ -31,7 +31,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, toggleFavorite }) =>
     return (
         <>
             <div className={styles['div-card']}>
-                <Card className={styles.cardStyle} extra={<Button type="text" className='button-heart' onClick={() => changeHeart()}>{isHeartFilled ? <HeartFilled /> : <HeartOutlined />}</Button>} hoverable cover={
+                <Card className={styles.cardStyle} extra={<Button type="text" className={styles['button-heart']} onClick={() => changeHeart()}>{isHeartFilled ? <HeartFilled /> : <HeartOutlined />}</Button>} hoverable cover={
                     <a href={`/product/${product.id}`}>
                         <div>
                             <img className={styles['img-card']} src={product.imagen} alt={product.nombre} />

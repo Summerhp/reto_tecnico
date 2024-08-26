@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Button } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import './promotionBanner.css';
+import styles from'./promotionBanner.module.css';
 
 interface PromotionBannerProps {
     price: number;
@@ -10,17 +10,17 @@ interface PromotionBannerProps {
 const PromotionBanner: React.FC<PromotionBannerProps> = ({ price }) => {
     return (
         <>
-            <Row className='row-icon' align="top">
+            <Row className={styles['row-icon']}  align="top">
                 <Col span={5}>
-                    <div className='div-icon'>
+                    <div className={styles['div-icon']} >
                         <Row align="middle" justify="center">
                             <Col span={10}>
-                                <h1 className='h1-circle'>HOY</h1>
+                                <h1 className={styles['h1-circle']} >HOY</h1>
                             </Col>
                             <Col span={10} offset={3} pull={1}>
-                                <p className='p-d'>DESDE</p>
-                                <p className='p-price'>${price}</p>
-                                <p className='p-week'>SEMANAL</p>
+                                <p className={styles['p-d']} >DESDE</p>
+                                <p className={styles['p-price']} >${price}</p>
+                                <p className={styles['p-week']} >SEMANAL</p>
                             </Col>
                         </Row>
                     </div>

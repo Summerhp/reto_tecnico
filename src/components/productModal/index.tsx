@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal, Row, Col } from 'antd';
 import { CheckOutlined } from '@ant-design/icons';
 import modalImage from '../../assets/img/Modal.png';
+import './antdModal.css';
 import styles from './modal.module.css';
 
 interface ProductModalProps {

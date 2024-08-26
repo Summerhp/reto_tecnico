@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Image, Button } from 'antd';
 import { HeartFilled, HeartOutlined } from '@ant-design/icons';
-import './productPhotos.css'
+import styles from './productPhotos.module.css'
 
 interface ProductGalleryProps {
     product: { imagen: string };
@@ -12,19 +12,19 @@ interface ProductGalleryProps {
 const ProductGallery: React.FC<ProductGalleryProps> = ({ product, isHeartFilled, changeHeart }) => {
     return (
         <>
-            <Col className='col-photos' span={3} offset={1}>
+            <Col className={styles['col-photos']} span={3} offset={1}>
                 {[...Array(4)].map((_, index) => (
-                    <Image className='image-col' key={index} src={product.imagen} />
+                    <Image className={styles['image-col']}  key={index} src={product.imagen} />
                 ))}
             </Col>
             <Col span={6}>
-                <div className='div-photo'>
-                    <Image className='image-div' src={product.imagen} />
-                    <Button className='button-heart' type="text" onClick={changeHeart}>
+                <div className={styles['div-photo']} >
+                    <Image className={styles['image-div']}  src={product.imagen} />
+                    <Button className={styles['button-heart']}  type="text" onClick={changeHeart}>
                         {isHeartFilled ? <HeartFilled /> : <HeartOutlined />}
                     </Button>
-                    <div className='div-discount' >
-                        <p className='p-discount'>40%</p>
+                    <div className={styles['div-discount']}  >
+                        <p className={styles['p-discount']} >40%</p>
                     </div>
                 </div>
             </Col>
