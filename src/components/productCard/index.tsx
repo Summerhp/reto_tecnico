@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, Row, Col } from 'antd';
 import ProductModal from '../productModal';
 import { renderStars } from '../../utils/renderStars';
-import HeartButton from '../heartButton';
+import HeartButton from '../../utils/heartButton';
 import './antdCard.css';
 import styles from './card.module.css';
 

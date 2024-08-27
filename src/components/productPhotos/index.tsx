@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Image, Button } from 'antd';
-import HeartButton from '../heartButton';
+import HeartButton from '../../utils/heartButton';
 import styles from './productPhotos.module.css'
 
 interface ProductGalleryProps {
