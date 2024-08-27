@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'antd';
 import { useParams } from 'react-router-dom';
 import ProductGrid from '../../components/productGrid';
@@ -39,24 +39,33 @@ interface Product {
 }
 
 const ProductDetail: React.FC = () => {
+    const [favorites, setFavorites] = useState<{ [key: string]: boolean }>({});
     const { id } = useParams<{ id: string }>();
-    console.log(id)
     const allProducts: Product[] = data;
     const product = allProducts.find((prod) => prod.id === id);
+    useEffect(() => {
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '{}');
+        setFavorites(storedFavorites);
+      }, []);
     if (!product) {
         return <div>Producto no encontrado</div>;
     }
-    const [isHeartFilled, setIsHeartFilled] = useState(false);
-    const toggleFavorite = (productId: string) => {
-
-        setIsHeartFilled(!isHeartFilled);
-    };
+    
+    const toggleFavorite = (id: string) => {
+        const updatedFavorites = {
+          ...favorites,
+          [id]: !favorites[id],
+        };
+        setFavorites(updatedFavorites);
+        localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+      };
     const relatedProducts = allProducts.filter((prod) => prod.categoria === product.categoria && prod.id !== id).slice(0, 4);
+    const isHeartFilled = Boolean(favorites && favorites[product.id]);
     return (
         <>
             <MenuTop marca={product.marca} nombre={product.nombre}></MenuTop>
             <Row>
-                <ProductGallery product={{ imagen: product.imagen }} toggleFavorite={toggleFavorite} isHeartFilled={isHeartFilled}></ProductGallery>
+                <ProductGallery product={{ id: product.id, imagen: product.imagen }} toggleFavorite={toggleFavorite} isHeartFilled={isHeartFilled}></ProductGallery>
                 <Col span={14}>
                     <ProductInfo product={product} renderStars={(reviews) => renderStars({ rating: reviews })} />
                     <PromotionBanner price={(product.precio / 3)}></PromotionBanner>
