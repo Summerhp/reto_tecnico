@@ -31,7 +31,7 @@ const getAllBrands = (products: Product[]): Brand[] => {
 
 const Products: React.FC = () => {
   const allProducts: Product[] = data;
-
+  const [favorites, setFavorites] = useState<{ [key: string]: boolean }>({});
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(allProducts);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all-categories');
@@ -43,6 +43,10 @@ const Products: React.FC = () => {
     priceRange: { min: 0, max: 999999 },
   });
 
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '{}');
+    setFavorites(storedFavorites);
+  }, []);
   useEffect(() => {
     let filtered = allProducts.filter((product) => {
       const fullName = `${product.marca.toLowerCase()} ${product.nombre.toLowerCase()}`;
@@ -87,10 +91,14 @@ const Products: React.FC = () => {
   };
 
   const toggleFavorite = (id: string) => {
-    
+    const updatedFavorites = {
+      ...favorites,
+      [id]: !favorites[id],
+    };
+    setFavorites(updatedFavorites);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
   const images = [carousel, carousel, carousel];
-  
 
   return (
     <>
@@ -107,7 +115,7 @@ const Products: React.FC = () => {
           <Filters brands={allBrands} onFiltersChange={handleFiltersChange} />
         </Col>
         <Col className='col-productgrid' span={16} offset={0}>
-          <ProductGrid products={filteredProducts} toggleFavorite={toggleFavorite} />
+          <ProductGrid favorites={favorites} products={filteredProducts} toggleFavorite={toggleFavorite} />
         </Col>
       </Row>
       <Carrusel images={images}></Carrusel>

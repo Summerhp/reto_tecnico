@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button, Row, Col } from 'antd';
-import { HeartOutlined, HeartFilled } from '@ant-design/icons';
+import { Card, Row, Col } from 'antd';
 import ProductModal from '../productModal';
 import { renderStars } from '../../utils/renderStars';
 import HeartButton from '../heartButton';
@@ -18,21 +17,19 @@ interface ProductCardProps {
         informacion: JSON;
     };
     toggleFavorite: (id: string) => void;
+    isHeartFilled: boolean;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, toggleFavorite }) => {
-    const [isHeartFilled, setIsHeartFilled] = useState(false);
+const ProductCard: React.FC<ProductCardProps> = ({ product, toggleFavorite, isHeartFilled}) => {
 
     const changeHeart = () => {
-        //Solicitud a la API para actualizar los favoritos
-        setIsHeartFilled(!isHeartFilled);
         toggleFavorite(product.id);
     };
 
     return (
         <>
             <div className={styles['div-card']}>
-                <Card className={styles.cardStyle} extra={<HeartButton isHeartFilled={isHeartFilled} toggleFavorite={changeHeart} variant="productPhotos" />} hoverable cover={
+                <Card className={styles.cardStyle} extra={<HeartButton id={product.id} isHeartFilled={isHeartFilled} toggleFavorite={changeHeart} variant="card" />} hoverable cover={
                     <a href={`/product/${product.id}`}>
                         <div>
                             <img className={styles['img-card']} src={product.imagen} alt={product.nombre} />
