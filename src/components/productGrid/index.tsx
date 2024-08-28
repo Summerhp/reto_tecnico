@@ -13,7 +13,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, toggleFavorite, fav
         <Row>
             {products.map((product) => {
                 const isHeartFilled = Boolean(favorites && favorites[product.id]);
-                console.log(isHeartFilled, product.id);
                 return (
                     <ProductCard key={product.id} product={product} toggleFavorite={toggleFavorite} isHeartFilled={isHeartFilled}/>
                 );

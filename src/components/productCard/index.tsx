@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Row, Col } from 'antd';
 import ProductModal from '../productModal';
 import { renderStars } from '../../utils/renderStars';

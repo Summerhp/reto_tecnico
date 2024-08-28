@@ -6,7 +6,6 @@ import styles from './navbar.module.css';
 
 const { Header } = Layout;
 
-
 const Navbar: React.FC = () => {
     const items: MenuProps['items'] = ['Home', 'Celulares', 'Motocicletas'].map((key) => ({
         key,

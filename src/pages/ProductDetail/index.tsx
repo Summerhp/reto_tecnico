@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Row, Col } from 'antd';
 import { useParams } from 'react-router-dom';
 import ProductGrid from '../../components/productGrid';
@@ -52,7 +52,7 @@ const ProductDetail: React.FC = () => {
             </Row>
             <Row justify={'center'}>
                 <Col>
-                    <ProductGrid products={relatedProducts} />
+                    <ProductGrid favorites={favorites} toggleFavorite={toggleFavorite} products={relatedProducts} />
                 </Col>
             </Row>
         </>

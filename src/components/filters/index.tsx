@@ -19,7 +19,8 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
     const [priceRange, setPriceRange] = useState<{ min: number; max: number }>({ min: 0, max: Infinity });
     const [filledStars, setFilledStars] = useState<number>(0)
 
-    const handleBrandChange = (checkedValues: any) => {
+    const handleBrandChange = (checkedValues: string[]) => {
+        console.log(checkedValues)
         setSelectedBrands(checkedValues);
         onFiltersChange({ brands: checkedValues, reviews: selectedReviews, priceRange });
     };
@@ -50,7 +51,7 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
                         <Checkbox.Group className={styles['checkbox-group']} onChange={handleBrandChange}>
                             {brands.map((brand, index) => (
                                 <Form.Item className={styles['form-items']} key={index}>
-                                    <Checkbox onChange={handleBrandChange} value={brand}>
+                                    <Checkbox value={brand}>
                                         {brand.name}
                                     </Checkbox>
                                 </Form.Item>

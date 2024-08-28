@@ -4,7 +4,7 @@ import { CheckOutlined } from '@ant-design/icons';
 import modalImage from '../../assets/img/Modal.png';
 import './antdModal.css';
 import styles from './modal.module.css';
-import { Product } from '../types/Product';
+import { Product } from '../../types/product';
 
 interface ProductModalProps {
     product: Product;

@@ -2,19 +2,12 @@ import React from 'react';
 import { Row, Col, Tabs, Descriptions } from 'antd';
 import './antdDescription.css'
 import styles from './productSpecification.module.css';
+import { Product } from '../../types/product';
 
 const { TabPane } = Tabs;
 
 interface ProductSpecificationsProps {
-    product: {
-        id: string;
-        nombre: string;
-        marca: string;
-        precio: number;
-        reviews: number;
-        imagen: string;
-        informacion: JSON;
-    };
+    product: Product;
 }
 
 const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({ product }) => {
