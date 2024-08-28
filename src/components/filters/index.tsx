@@ -20,7 +20,6 @@ const Filters: React.FC<FiltersProps> = ({ brands, onFiltersChange }) => {
     const [filledStars, setFilledStars] = useState<number>(0)
 
     const handleBrandChange = (checkedValues: any) => {
-        console.log(checkedValues)
         setSelectedBrands(checkedValues);
         onFiltersChange({ brands: checkedValues, reviews: selectedReviews, priceRange });
     };

@@ -4,16 +4,10 @@ import { CheckOutlined } from '@ant-design/icons';
 import modalImage from '../../assets/img/Modal.png';
 import './antdModal.css';
 import styles from './modal.module.css';
+import { Product } from '../types/Product';
 
 interface ProductModalProps {
-    product: {
-        id: string;
-        nombre: string;
-        marca: string;
-        precio: number;
-        imagen: string;
-        informacion: JSON;
-    };
+    product: Product;
 }
 
 const ProductModal: React.FC<ProductModalProps> = ({ product }) => {

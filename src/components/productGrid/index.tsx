@@ -1,16 +1,7 @@
 import React from 'react';
 import ProductCard from '../productCard';
 import { Row } from 'antd';
-
-interface Product {
-    id: string;
-    nombre: string;
-    marca: string;
-    precio: number;
-    reviews: number;
-    imagen: string;
-    informacion: any;
-}
+import { Product } from '../../types/product';
 
 interface ProductGridProps {
     products: Product[];

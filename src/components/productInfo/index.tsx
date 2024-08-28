@@ -2,14 +2,10 @@ import React from 'react';
 import { Row, Col, Space } from 'antd';
 import { CreditCardOutlined } from '@ant-design/icons';
 import styles from './productInfo.module.css'
+import { Product } from '../../types/product';
 
 interface ProductInfoProps {
-    product: {
-        marca: string;
-        nombre: string;
-        precio: number;
-        reviews: number;
-    };
+    product: Pick<Product, 'marca' | 'nombre' | 'precio' | 'reviews'>;
     renderStars: (reviews: number) => React.ReactNode;
 }
 

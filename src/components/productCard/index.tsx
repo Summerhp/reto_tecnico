@@ -5,17 +5,10 @@ import { renderStars } from '../../utils/renderStars';
 import HeartButton from '../../utils/heartButton';
 import './antdCard.css';
 import styles from './card.module.css';
+import { Product } from '../../types/product';
 
 interface ProductCardProps {
-    product: {
-        id: string;
-        nombre: string;
-        marca: string;
-        precio: number;
-        reviews: number;
-        imagen: string;
-        informacion: JSON;
-    };
+    product: Product;
     toggleFavorite: (id: string) => void;
     isHeartFilled: boolean;
 }

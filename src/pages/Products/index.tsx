@@ -8,17 +8,7 @@ import data from '../../utils/data.json';
 import Carrusel from '../../components/carousel';
 import carousel from '../../assets/img/Carousel.png'
 import ProductsOften from '../../components/productsOften';
-
-interface Product {
-  id: string;
-  nombre: string;
-  marca: string;
-  precio: number;
-  reviews: number;
-  imagen: string;
-  categoria: string;
-  informacion: any;
-}
+import { Product } from '../../types/product';
 
 interface Brand {
   name: string;
