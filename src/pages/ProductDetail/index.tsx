@@ -13,28 +13,16 @@ import ProductDetailInfo from '../../components/productDetailPhoto';
 import ProductSpecifications from '../../components/productSpecifications';
 import CreditOffer from '../../components/productOffer';
 import { Product } from '../../types/product';
+import useFavorites from '../../hooks/useFavorites';
 
 const ProductDetail: React.FC = () => {
-    const [favorites, setFavorites] = useState<{ [key: string]: boolean }>({});
+    const { favorites, toggleFavorite } = useFavorites();
     const { id } = useParams<{ id: string }>();
     const allProducts: Product[] = data;
     const product = allProducts.find((prod) => prod.id === id);
-    useEffect(() => {
-        const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '{}');
-        setFavorites(storedFavorites);
-      }, []);
     if (!product) {
         return <div>Producto no encontrado</div>;
     }
-    
-    const toggleFavorite = (id: string) => {
-        const updatedFavorites = {
-          ...favorites,
-          [id]: !favorites[id],
-        };
-        setFavorites(updatedFavorites);
-        localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-      };
     const relatedProducts = allProducts.filter((prod) => prod.categoria === product.categoria && prod.id !== id).slice(0, 4);
     const isHeartFilled = Boolean(favorites && favorites[product.id]);
     return (

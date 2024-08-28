@@ -9,6 +9,7 @@ import Carrusel from '../../components/carousel';
 import carousel from '../../assets/img/Carousel.png'
 import ProductsOften from '../../components/productsOften';
 import { Product } from '../../types/product';
+import useFavorites from '../../hooks/useFavorites';
 
 interface Brand {
   name: string;
@@ -21,7 +22,7 @@ const getAllBrands = (products: Product[]): Brand[] => {
 
 const Products: React.FC = () => {
   const allProducts: Product[] = data;
-  const [favorites, setFavorites] = useState<{ [key: string]: boolean }>({});
+  const { favorites, toggleFavorite } = useFavorites();
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(allProducts);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all-categories');
@@ -32,11 +33,6 @@ const Products: React.FC = () => {
     reviews: 0,
     priceRange: { min: 0, max: 999999 },
   });
-
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem('favorites') || '{}');
-    setFavorites(storedFavorites);
-  }, []);
   useEffect(() => {
     let filtered = allProducts.filter((product) => {
       const fullName = `${product.marca.toLowerCase()} ${product.nombre.toLowerCase()}`;
@@ -78,15 +74,6 @@ const Products: React.FC = () => {
 
   const handleFiltersChange = (filters) => {
     setSelectedFilters(filters);
-  };
-
-  const toggleFavorite = (id: string) => {
-    const updatedFavorites = {
-      ...favorites,
-      [id]: !favorites[id],
-    };
-    setFavorites(updatedFavorites);
-    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
   const images = [carousel, carousel, carousel];
 
